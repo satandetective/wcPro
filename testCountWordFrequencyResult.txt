@@ -1,0 +1,15 @@
+
+abc 1;ab-c 1;
+zipsa 1
+
+
+a 3;b 3
+a 1;jk 3
+asd 3
+a-sd-af-a-sf-a 1
+asa 1
+
+asdad 1
+
+asd 3
+a 1;b 1;c 1;d 1
