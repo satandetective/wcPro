@@ -10,7 +10,9 @@ public class wcInput {
     public String judgeInput(String[] args)
     {
         String inputFile="";
-        if(args.length==0)//没有文件
+        String appendTxt=".txt";//后缀
+        String windowsTxt="-x";//图形化界面
+        if(args.length==0)
         {
             System.out.println("未输入文件名，请重新输入文件名");
             inputFile="no file";
@@ -20,9 +22,9 @@ public class wcInput {
             System.out.println("多个文件无法同时处理，请输入一个文件名");
             inputFile="so many files";
         }
-        else if(!args[0].endsWith(".txt"))
+        else if(!args[0].endsWith(appendTxt))
         {
-            if(args[0].equals("-x")){
+            if((windowsTxt).equals(args[0])){
                 JFileChooser jfc=new JFileChooser(".");
                 int returnVal = jfc.showOpenDialog(null);
                 if(returnVal == JFileChooser.APPROVE_OPTION)
@@ -52,7 +54,9 @@ public class wcInput {
         char s;
         StringBuilder sb = new StringBuilder();
         while((s = (char)br.read()) != (char)-1)
+        {
             sb.append(s);
+        }
         isr.close();
         br.close();
         fileContent = sb.toString().toLowerCase();
